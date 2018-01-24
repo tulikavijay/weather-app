@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Icon = ()=>{
-  const icon = props.src;
-  return (
-    <div>
-      <img src={icon} />
-    </div>
-  )
+class Icon extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return (
+      <div>
+        <img src={this.props.icon} />
+      </div>
+    )
+  }
 }
 
 export default Icon
