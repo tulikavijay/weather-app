@@ -23,7 +23,7 @@ class LocalWeather extends React.Component{
    return(
      <div>
         <span>{this.props.temp ? this.props.temp : '' }</span>
-        <button>{this.props.temp ? this.state.scaleValue : ''}</button>
+        <span onClick={()=>this.toggleScale()}>{this.props.temp ? this.state.scaleValue : ''}</span>
      </div>
    )
  }

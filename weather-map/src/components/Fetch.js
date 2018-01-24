@@ -20,9 +20,11 @@ class Fetch extends React.Component{
       const temp =  data.main['temp'] ;
       const icon = data.weather[0].icon ;
       await this.setStateAsync({temp:temp,icon:icon});
+      console.log(res);
     }
     else {
       this.setStateAsync({temp:'',icon:''});
+      console.log('nothing');
     }
   }
   selectHandler(temp){
