@@ -7,25 +7,25 @@ class GeoLocation extends React.Component {
     this.state={
       lon : null,
       lat : null
-    }
+    };
     this.showPosition = this.showPosition.bind(this);
   }
-  componentDidMount(){
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(this.showPosition);
-    } else {
-         console.log("Geolocation is not supported by this browser.");
-    }
-  }
+   componentDidMount(){
+     if (navigator.geolocation) {
+         navigator.geolocation.getCurrentPosition(this.showPosition);
+     } else {
+          console.log("Geolocation is not supported by this browser.");
+     }
+   }
   showPosition(position) {
-    this.setState({lon:position.coords.latitude,lat:position.coords.longitude});
-    console.log(this.state.lon);
+    this.setState({lon:position.coords.latitude,lat:position.coords.longitude})
+    console.log(this.state);
    }
    render(){
      return (
-       <div>
-       <Fetch lon={this.state.lon} lat={this.state.lat} />
-       </div>
+      <div>
+        { this.state.lon && this.state.lat && <Fetch lon={this.state.lon} lat={this.state.lat} /> }
+      </div>
      )
    }
 }

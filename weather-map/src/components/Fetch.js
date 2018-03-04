@@ -8,22 +8,18 @@ class Fetch extends React.Component{
     this.state = {};
     this.selectHandler = this.selectHandler.bind(this);
   }
-  setStateAsync(){
-    return new Promise((resolve)=>{
-      this.setState(this.state,resolve)
-    })
-  }
   async componentDidMount(){
+    console.log(this.props.lat);
     if(this.props.lat && this.props.lon){
       const res = await fetch(`https://fcc-weather-api.glitch.me/api/current?lat=${this.props.lat}&lon=${this.props.lon}`);
-      const {data} = await res.json();
+      const data = await res.json();
       const temp =  data.main['temp'] ;
       const icon = data.weather[0].icon ;
-      await this.setStateAsync({temp:temp,icon:icon});
-      console.log(res);
+      this.setState({temp:temp,icon:icon})
+      console.log(this.state);
     }
     else {
-      this.setStateAsync({temp:'',icon:''});
+      this.setState({temp:'',icon:''});
       console.log('nothing');
     }
   }
@@ -33,8 +29,8 @@ class Fetch extends React.Component{
   render(){
     return(
       <div>
-      <LocalWeather temp={this.state.temp} on_click={this.selectHandler} />
-      <Icon src={this.state.icon ? this.state.icon : ''} />
+      {this.state.temp && <LocalWeather temp={this.state.temp} on_click={this.selectHandler} />}
+      {this.state.icon && <img src={this.state.icon} />}
       </div>
     )
   }
