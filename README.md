@@ -27,7 +27,7 @@ $ gatsby develop
 ### Development
 
 Want to contribute? Great!
-Checkout open issues and start Pulling - [Issues](/user/project/issues/)
+Checkout open issues and start Pulling - [Issues](../../issues/)
 
 
 
