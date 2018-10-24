@@ -639,3 +639,30 @@ button{
 .toggleScale{
   cursor: pointer;
 }
+
+
+/*HEADER*/
+.main__header {
+    background: #fff;
+    box-shadow: 0 0 2rem rgba(0,0,255,.1);
+    align-items: center;
+    transition: background-color .5s linear;
+    -webkit-animation: 1s ease-in-out fadein;
+    animation: 1s ease-in-out fadein;
+    margin-bottom: '1.45rem',
+}
+.main__header h1 a {
+  color: rebeccapurple;
+  text-decoration: none;
+}
+.app-brand_container {
+  display: block;
+  width: 85%;
+  float: left;
+}
+
+.ToggleTheme_container {
+  display: block;
+  width: 15%;
+  float: right;
+}
