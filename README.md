@@ -1,9 +1,9 @@
-# weather-app
+# Weather-app
 React-gatsby weather app :cloud:
 ![](https://raw.githubusercontent.com/Trapsta/RI/master/Screenshots/eee6439a-38b5-4e13-83f8-9b5cf2ad8315.png)
 Api used : https://fcc-weather-api.glitch.me/
 
-### Tech
+### Techstack
 * [Gatsby](https://www.gatsbyjs.org/) - Gatsby is a blazing fast modern site generator for React.
 * [ReactJS](https://reactjs.org) - A JavaScript library for building user interfaces
 * [GraphQL](https://graphql.org) - A query language for your API
